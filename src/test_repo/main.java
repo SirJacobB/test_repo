@@ -16,7 +16,8 @@ public class main extends Application{
 	Group root = new Group();
 	Scene scene = new Scene(root, WORLD_WIDTH, WORLD_HEIGHT);
 	
-	private Circle cir = new Circle(WORLD_WIDTH/50);
+//	private Circle cir = new Circle(WORLD_WIDTH/50);
+	private Player player = new Player(WORLD_WIDTH/50);
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -36,26 +37,26 @@ public class main extends Application{
 	
 	private void createCircle() {
 		
-		cir.setFill(Color.rgb(230, 36, 140));
-		cir.setTranslateX(WORLD_WIDTH/2);
-		cir.setTranslateY(WORLD_HEIGHT/2);
+//		player.setFill(Color.rgb(230, 36, 140));
+		player.setTranslateX(WORLD_WIDTH/2);
+		player.setTranslateY(WORLD_HEIGHT/2);
 		
-		root.getChildren().addAll(cir);
+		root.getChildren().addAll(player);
 	}
 	
 	private void eventListener() {
 		scene.setOnKeyPressed(event->{
 			if(event.getCode() == KeyCode.W) {
-				cir.setTranslateY(cir.getTranslateY()-5);
+				player.setTranslateY(player.getTranslateY()-5);
 			}
 			if(event.getCode() == KeyCode.A) {
-				cir.setTranslateX(cir.getTranslateX()-5);
+				player.setTranslateX(player.getTranslateX()-5);
 			}
 			if(event.getCode() == KeyCode.S) {
-				cir.setTranslateY(cir.getTranslateY()+5);
+				player.setTranslateY(player.getTranslateY()+5);
 			}
 			if(event.getCode() == KeyCode.D) {
-				cir.setTranslateX(cir.getTranslateX()+5);
+				player.setTranslateX(player.getTranslateX()+5);
 			}
 		});
 	}
