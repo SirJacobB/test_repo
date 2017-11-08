@@ -18,13 +18,6 @@ public class main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		Circle cir = new Circle(WORLD_WIDTH/50);
-		cir.setFill(Color.rgb(230, 36, 140));
-		cir.setTranslateX(WORLD_WIDTH/2);
-		cir.setTranslateY(WORLD_HEIGHT/2);
-		
-		root.getChildren().addAll(cir);
-		
 		primaryStage.setTitle("Circle");
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
@@ -33,5 +26,14 @@ public class main extends Application{
 
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	private void createCircle() {
+		Circle cir = new Circle(WORLD_WIDTH/50);
+		cir.setFill(Color.rgb(230, 36, 140));
+		cir.setTranslateX(WORLD_WIDTH/2);
+		cir.setTranslateY(WORLD_HEIGHT/2);
+		
+		root.getChildren().addAll(cir);
 	}
 }
