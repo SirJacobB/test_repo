@@ -18,6 +18,8 @@ public class main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
+		createCircle();
+		
 		primaryStage.setTitle("Circle");
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
